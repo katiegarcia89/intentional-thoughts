@@ -1,265 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#f1e9dc">
-    <title>Happy Father’s Day, Pop</title>
-    <meta name="description" content="A little Father’s Day card made with a lot of love.">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎺</text></svg>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090b0e">
+  <meta name="description" content="Enter a haunted Halloween pop-up book. Witches, restless bones, ghosts, werewolves, and something waiting in the fog.">
+  <title>The House After Midnight · Halloween</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23090b0e'/%3E%3Cpath d='m9 38 31-28 31 28v32H9Z' fill='%23a5513a'/%3E%3Cpath d='M34 48h12v22H34' fill='%23090b0e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Creepster&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/halloween/scenes-a.png">
+  <link rel="stylesheet" href="halloween.css"><script src="halloween.js" defer></script>
 </head>
 <body>
-    <main class="page-shell">
-        <div class="floating-doodles" aria-hidden="true"><span>✦</span><span>♡</span><span>✦</span><span>☺</span></div>
-        <p class="eyebrow">A little something for you</p>
-        <section class="song-card is-playing" aria-label="Card soundtrack">
-            <div class="song-label"><span aria-hidden="true">♪</span><p><small>Our soundtrack</small>“What a Wonderful World” — Louis Armstrong</p></div>
-            <iframe class="song-player"
-                src="https://embed.music.apple.com/us/song/what-a-wonderful-world/1507257533"
-                data-src="https://embed.music.apple.com/us/song/what-a-wonderful-world/1507257533"
-                width="100%"
-                height="175"
-                frameborder="0"
-                allowfullscreen=""
-                allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-                title="What a Wonderful World by Louis Armstrong">
-            </iframe>
-        </section>
-
-        <section class="card-stage" aria-label="Father’s Day card">
-            <div class="card" id="card">
-                <div class="popcorn-burst" aria-hidden="true"></div>
-                <div class="card-inside">
-                    <section class="book-page page-popcorn is-current" data-page="0" aria-label="Page one">
-                        <div class="page-illustration popcorn-scene" aria-hidden="true">
-                            <span class="popcorn-piece piece-one"></span>
-                            <span class="popcorn-piece piece-two"></span>
-                            <span class="popcorn-piece piece-three"></span>
-                            <span class="popcorn-piece piece-four"></span>
-                            <div class="popcorn-tub">
-                                <span class="tub-stripe"></span><span class="tub-stripe"></span><span class="tub-stripe"></span>
-                                <i class="face-eye eye-left"></i><i class="face-eye eye-right"></i><i class="face-smile"></i>
-                            </div>
-                            <span class="cartoon-arm arm-left"></span><span class="cartoon-arm arm-right"></span>
-                            <span class="cartoon-leg leg-left"></span><span class="cartoon-leg leg-right"></span>
-                        </div>
-                        <div class="page-copy">
-                            <p class="page-number">01</p>
-                            <p class="chapter"></p>
-                            <h2>You are the<br><em>best Pop.</em></h2>
-                            <p>Seriously. No one else even comes close.</p>
-                            <button class="page-next" type="button" data-next="1">Turn the page <span aria-hidden="true">→</span></button>
-                        </div>
-                    </section>
-
-                    <section class="book-page page-classic" data-page="2" aria-label="Page three" hidden>
-                        <div class="page-copy classic-copy">
-                            <p class="page-number">03</p>
-                            <p class="chapter"></p>
-                            <h2>Because you are<br><em>a classic.</em></h2>
-                            <p>Timeless, one of a kind, and somehow getting better with every mile.</p>
-                            <div class="page-actions">
-                                <button class="page-back" type="button" data-back="1"><span aria-hidden="true">←</span> Back</button>
-                                <button class="page-next" type="button" data-next="3">Keep going <span aria-hidden="true">→</span></button>
-                            </div>
-                        </div>
-                        <div class="page-illustration car-scene" aria-hidden="true">
-                            <svg viewBox="0 0 520 300" role="img">
-                                <ellipse class="car-shadow" cx="267" cy="254" rx="224" ry="19"/>
-                                <path class="car-main-body" d="M55 187c5-31 23-54 53-67 26-11 69-17 130-18h172c35 0 58 12 70 35l13 50-25 43H73c-19-10-25-24-18-43Z"/>
-                                <path class="car-cabin" d="M132 113 174 58c9-12 21-18 36-18h82c17 0 30 7 39 21l28 42-227 10Z"/>
-                                <path class="car-roof" d="M164 61c11-18 26-27 47-28h82c21 0 38 10 50 31"/>
-                                <path class="car-window" d="m158 99 31-40c5-6 11-9 19-9h30v52l-80-3Zm94 3V50h35c13 0 23 5 30 16l23 35-88 1Z"/>
-                                <path class="long-hood" d="M343 103h113l22 23-141 8 6-31Z"/>
-                                <path class="rear-fender" d="M65 205c6-54 33-82 81-82 46 0 75 29 81 87l-26 1c-8-34-26-51-55-51-31 0-49 19-55 57l-26-12Z"/>
-                                <path class="front-fender" d="M338 205c8-53 32-80 72-80 45 0 70 28 76 84l-25 7c-8-37-25-56-51-56-29 0-45 18-50 55l-22-10Z"/>
-                                <path class="running-board" d="M193 207h178l-10 22H185l8-22Z"/>
-                                <path class="door-line" d="M245 112v83m8-72h59m-10 20h12"/>
-                                <path class="hood-lines" d="M350 116h101m-98 10h103m-100 10h103m-99 10h102"/>
-                                <path class="chrome-spear" d="M91 179c90 13 218 11 367-8"/>
-                                <circle class="tire" cx="146" cy="215" r="46"/><circle class="whitewall" cx="146" cy="215" r="33"/><circle class="hub" cx="146" cy="215" r="17"/>
-                                <circle class="tire" cx="410" cy="215" r="46"/><circle class="whitewall" cx="410" cy="215" r="33"/><circle class="hub" cx="410" cy="215" r="17"/>
-                                <path class="tall-grille" d="M468 119c25 7 31 31 25 73l-29 8-4-63 8-18Z"/>
-                                <path class="grille-lines" d="m470 129 16 1m-18 10 20 1m-20 10 21 1m-20 10 20 1m-19 10 18 1m-17 10 14 1"/>
-                                <circle class="headlight" cx="452" cy="139" r="17"/>
-                                <path class="headlight-stem" d="m451 153-5 19"/>
-                                <path class="bumper" d="M451 212h58M43 216h51"/>
-                            </svg>
-                            <span class="road-line"></span>
-                        </div>
-                    </section>
-
-                    <section class="book-page page-fixit" data-page="3" aria-label="Page four" hidden>
-                        <div class="page-illustration fixit-scene" aria-hidden="true">
-                            <div class="pegboard"></div>
-                            <svg class="toolbox-cartoon" viewBox="0 0 420 360">
-                                <path class="toolbox-handle" d="M137 137V91c0-24 15-38 39-38h68c24 0 39 14 39 38v46"/>
-                                <path class="toolbox-lid" d="M62 137h296v65H62z"/>
-                                <path class="toolbox-body" d="M77 197h266l-19 111H96L77 197Z"/>
-                                <path class="toolbox-line" d="M91 228h239"/>
-                                <circle class="tool-eye" cx="176" cy="248" r="8"/><circle class="tool-eye" cx="244" cy="248" r="8"/>
-                                <path class="tool-smile" d="M184 270c17 18 38 18 54 0"/>
-                                <path class="wrench" d="M284 33c-19 4-31 22-27 41l-97 96c-9-2-19 0-26 7l-60 60c-11 11-11 29 0 40s29 11 40 0l60-60c7-7 9-17 7-26l97-97c19 4 37-8 41-27l-26 13-20-20 11-27Z"/>
-                                <circle class="screw" cx="94" cy="257" r="9"/>
-                            </svg>
-                            <span class="spark spark-one">✦</span><span class="spark spark-two">✦</span>
-                        </div>
-                        <div class="page-copy fixit-copy">
-                            <p class="page-number">04</p>
-                            <p class="chapter"></p>
-                            <h2>Because you’re the original<br><em>Mr. Fix-It.</em></h2>
-                            <p>Some people call a repairman.<br><strong>We call Pop.</strong></p>
-                            <div class="page-actions">
-                                <button class="page-back" type="button" data-back="2"><span aria-hidden="true">←</span> Back</button>
-                                <button class="page-next" type="button" data-next="4">Keep Going <span aria-hidden="true">→</span></button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="book-page page-papa" data-page="5" aria-label="Page six" hidden>
-                        <div class="page-illustration papa-scene">
-                            <div class="papa-photo-frame">
-                                <img src="assets/pop-and-grandbaby.jpeg" alt="Pop holding his new grandbaby and smiling lovingly">
-                                <p aria-hidden="true">Love at first sight ♡</p>
-                            </div>
-                            <span class="papa-heart heart-one" aria-hidden="true">♡</span>
-                            <span class="papa-heart heart-two" aria-hidden="true">♡</span>
-                        </div>
-                        <div class="page-copy papa-copy">
-                            <p class="page-number">06</p>
-                            <p class="chapter"></p>
-                            <h2>The best Pop is now<br><em>the sweetest Papa.</em></h2>
-                            <p>One tiny new biggest fan gets to discover<br><strong>what we’ve known all along.</strong></p>
-                            <div class="page-actions">
-                                <button class="page-back" type="button" data-back="4"><span aria-hidden="true">←</span> Back</button>
-                                <button class="page-next" type="button" data-next="6">From my heart… <span aria-hidden="true">→</span></button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="book-page page-hero" data-page="4" aria-label="Page five" hidden>
-                        <div class="page-copy hero-copy">
-                            <p class="page-number">05</p>
-                            <p class="chapter"></p>
-                            <h2>Because you are<br><em>our family’s superhero.</em></h2>
-                            <p>No mask or cape required.<br><strong>You’re the hero we can always count on.</strong></p>
-                            <div class="page-actions">
-                                <button class="page-back" type="button" data-back="3"><span aria-hidden="true">←</span> Back</button>
-                                <button class="page-next" type="button" data-next="5">KEEP GOING <span aria-hidden="true">→</span></button>
-                            </div>
-                        </div>
-                        <div class="page-illustration hero-scene" aria-hidden="true">
-                            <span class="hero-rays"></span>
-                            <div class="hero-cape"></div>
-                            <div class="hero-emblem"><span>P</span></div>
-                            <span class="hero-star star-one">✦</span><span class="hero-star star-two">✦</span><span class="hero-star star-three">✦</span>
-                        </div>
-                    </section>
-
-                    <section class="book-page page-nutrition" data-page="1" aria-label="Page two" hidden>
-                        <div class="page-illustration nutrition-scene">
-                            <div class="nutrition-label" aria-label="Pop nutrition facts">
-                                <p class="label-pop">POP</p>
-                                <p class="label-title">Nutrition Facts</p>
-                                <div class="label-serving"><span>Serving size</span><strong>1 Amazing Man*</strong></div>
-                                <div class="label-thick"></div>
-                                <p class="amount">Amount per serving</p>
-                                <p class="family">1 Great Family</p>
-                                <div class="label-heavy"></div>
-                                <p class="daily">% Pop Power</p>
-                                <dl class="facts-list">
-                                    <div><dt>Unconditional Love</dt><dd>1000%</dd></div>
-                                    <div><dt>Unrivaled Skill</dt><dd>500%</dd></div>
-                                    <div><dt>Dedication</dt><dd>400%</dd></div>
-                                    <div><dt>Determination</dt><dd>300%</dd></div>
-                                    <div class="highlight-fact"><dt>Musical Talent</dt><dd>500%</dd></div>
-                                    <div class="highlight-fact"><dt>Patience</dt><dd>350%</dd></div>
-                                    <div class="highlight-fact"><dt>Ability to Fix Anything</dt><dd>500%</dd></div>
-                                    <div><dt>Guidance</dt><dd>200%</dd></div>
-                                </dl>
-                                <div class="label-thick small-thick"></div>
-                                <dl class="facts-list final-facts">
-                                    <div><dt>A Legend</dt><dd>100%</dd></div>
-                                </dl>
-                                <div class="label-thick foot-thick"></div>
-                                <p class="label-foot">* A significant source of coaching.</p>
-                            </div>
-                        </div>
-                        <div class="page-copy nutrition-copy">
-                            <p class="page-number">02</p>
-                            <p class="chapter"></p>
-                            <h2>Because you’re made of<br><em>all the good stuff.</em></h2>
-                            <p>No artificial ingredients. Just one completely original Pop.</p>
-                            <div class="page-actions">
-                                <button class="page-back" type="button" data-back="0"><span aria-hidden="true">←</span> Back</button>
-                                <button class="page-next" type="button" data-next="2">Keep going <span aria-hidden="true">→</span></button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="book-page page-letter" data-page="6" aria-label="Final page" hidden>
-                        <div class="letter-seal" aria-hidden="true"><span>♡</span></div>
-                        <div class="message">
-                            <p class="salutation">Dear Pop,</p>
-                            <h2>Thanks for making<br>the good days <em>better.</em></h2>
-                            <p>For every laugh, every lesson, every time you showed up, and all the little things I probably didn’t notice enough at the time—thank you.</p>
-                            <p>I’m so lucky to be your daughter, and even luckier to call you my Pop.</p>
-                            <p class="love">Love you always,</p>
-                            <p class="signature">Katie</p>
-                            <div class="voice-message">
-                                <audio class="voice-audio" preload="metadata">
-                                    <source src="assets/message-from-katie.m4a" type="audio/mp4">
-                                </audio>
-                                <button class="voice-play" type="button" aria-label="Play Katie’s voice message">
-                                    <span class="voice-icon" aria-hidden="true">▶</span>
-                                    <span><small>A message from Katie</small><strong class="voice-status">Tap to listen</strong></span>
-                                </button>
-                                <span class="voice-track" aria-hidden="true"><i></i></span>
-                            </div>
-                            <div class="page-actions letter-actions">
-                                <button class="page-back final-back" type="button" data-back="5"><span aria-hidden="true">←</span> Previous page</button>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <button class="card-cover" type="button" aria-expanded="false" aria-label="Open Father’s Day card">
-                    <span class="cover-collage" aria-hidden="true">
-                        <img src="assets/cover-01.jpeg" alt="">
-                        <img src="assets/cover-02.jpeg" alt="">
-                        <img src="assets/cover-03.jpeg" alt="">
-                        <img src="assets/cover-04.jpeg" alt="">
-                        <img src="assets/cover-05.jpeg" alt="">
-                        <img src="assets/cover-06.jpeg" alt="">
-                        <img src="assets/cover-07.jpeg" alt="">
-                        <img src="assets/cover-08.png" alt="">
-                        <img src="assets/cover-09.png" alt="">
-                        <img src="assets/cover-10.png" alt="">
-                    </span>
-                    <span class="stitching" aria-hidden="true"></span>
-                    <span class="cover-art">
-                        <span class="small-type">For the one &amp; only</span>
-                        <span class="star" aria-hidden="true">✦</span>
-                        <span class="title">Happy<br><br><em>Father’s Day</em></span>
-                        <span class="rule" aria-hidden="true"></span>
-                        <span class="dad">POP</span>
-                    </span>
-                    <span class="open-prompt">Click to open <b aria-hidden="true">↗</b></span>
-                </button>
-            </div>
-        </section>
-
-        <div class="card-controls" hidden>
-            <button class="close-card" type="button">Close card</button>
+  <header class="site-header">
+    <a class="brand" href="#halloween"><span aria-hidden="true">☾</span> intentional thoughts.</a>
+    <nav aria-label="Holiday cards" class="occasion-tabs"><a class="occasion active" href="#halloween" aria-current="page">Halloween <small>2026</small></a><a class="occasion" href="#fathers-day">Father’s Day <small>2026</small></a></nav>
+    <button class="sound-button" type="button" aria-pressed="false" aria-label="Turn on horror sounds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4Zm13-1q5 4 0 8M20 5q8 7 0 14"/></svg><span class="sound-label">Sound off</span></button>
+  </header>
+  <main id="halloween-view">
+    <section class="intro"><p class="eyebrow">OCTOBER 31 <span>✦</span> ENTER AT YOUR OWN RISK</p><h1>The house<br><em>after midnight.</em></h1><p class="intro-copy">Six doors. Something behind every one.</p></section>
+    <section class="experience" aria-label="Haunted Halloween pop-up book">
+      <div class="book-meta"><span class="meta-left">AN INVITATION TO THE OTHER SIDE</span><span>HALLOWEEN NIGHT · 2026</span></div>
+      <div class="book mode-cover" id="haunted-book" data-page="cover">
+        <div class="house-shadow" aria-hidden="true"></div>
+        <div class="scene-frame">
+          <div id="scene" class="scene"></div>
+          <div class="scene-vignette" aria-hidden="true"></div>
+          <div class="book-crease" aria-hidden="true"></div>
+          <div class="light-flicker" aria-hidden="true"></div>
+          <div class="cover-copy"><p>NOBODY HAS LIVED HERE FOR YEARS.</p><span>Something still does.</span></div>
+          <button class="door-control" id="door-control" type="button" aria-label="Open the haunted house door"><span class="door-knob" aria-hidden="true"></span><span class="door-label">KNOCK IF YOU DARE</span></button>
+          <button class="object-hotspot" id="object-hotspot" type="button" hidden><span class="object-mark" aria-hidden="true">+</span><span class="object-label"></span></button>
+          <div class="secret-reveal" id="secret-reveal" aria-hidden="true"></div>
+          <div class="final-greeting" hidden><span>Happy</span><strong>Halloween</strong><p>DON’T LET THE DARK FOLLOW YOU HOME.</p></div>
+          <div class="paper-turn" aria-hidden="true"></div>
         </div>
-        <p class="footer-note">Made with love, just for you.</p>
-        <p class="copyright">© 2026</p>
-        <p class="sr-only" id="announcement" aria-live="polite"></p>
-    </main>
-    <script src="script.js"></script>
+        <canvas id="fog-canvas" aria-hidden="true"></canvas>
+        <div class="fog-fallback" aria-hidden="true"></div>
+        <button type="button" class="cat-control" aria-label="Watch the black cat"><img src="assets/halloween/black-cat.png" alt="A realistic black cat watching you with yellow-green eyes" width="1024" height="1536"><span class="cat-caption">It sees what you don’t.</span></button>
+        <div class="scene-caption"><span class="room-number">THE THRESHOLD</span><span class="scene-instruction">The cat won’t go any closer.</span></div>
+      </div>
+      <div class="story-panel">
+        <div class="story-copy"><p class="chapter-label" id="chapter-label">BEFORE YOU CROSS THE THRESHOLD</p><h2 id="chapter-title">You heard that too.</h2><p id="chapter-copy">A scrape behind the door. A shape in the upstairs window. The house is empty. That’s what they told you.</p></div>
+        <button type="button" class="enter-button" id="enter-button">Enter the house <span aria-hidden="true">↗</span></button>
+        <div class="book-navigation" hidden><button id="previous" class="nav-arrow" type="button" aria-label="Previous page">←</button><div class="page-dots" aria-label="Book chapters"></div><button id="next" class="nav-arrow" type="button" aria-label="Next page">→</button></div>
+      </div>
+      <div class="under-book"><p class="discovery-hint">Touch the marked objects. Some things are better left alone.</p><button type="button" class="restart" hidden>Leave the house ↗</button></div>
+    </section>
+    <footer><p>THE NIGHT BELONGS TO THEM.</p><span>Intentional Thoughts · Family holidays & shared traditions · 2026</span></footer>
+  </main>
+  <main id="fathers-day-view" hidden><div class="archive-heading"><p class="eyebrow">FROM THE FAMILY ARCHIVE</p><h1>Father’s Day, 2026</h1><p>The original card, preserved.</p><a href="fathers-day.html" target="_blank" rel="noopener">Open the original card in its own tab ↗</a></div><iframe id="fathers-day-frame" data-src="fathers-day.html" title="Preserved original Father’s Day card" allow="autoplay; encrypted-media; fullscreen"></iframe></main>
+  <div id="discovery-toast" class="discovery-toast" role="status"></div><p id="page-announcement" class="sr-only" aria-live="polite"></p>
+  <noscript><p class="no-script">Enable JavaScript to enter the house. <a href="fathers-day.html">Open the preserved Father’s Day card.</a></p></noscript>
 </body>
 </html>
